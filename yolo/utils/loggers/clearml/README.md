@@ -33,7 +33,7 @@ To get started:
    pip install clearml
    ```
 
-   _Note: The `clearml` package is listed (commented out) in `requirements.txt` and is not installed by default — install it with the command above._
+   _Note: The `clearml` package is listed (commented out) in `../../../../requirements.txt` and is not installed by default — install it with the command above._
 
 2. **Connect the ClearML SDK to your server:**  
    [Create credentials](https://app.clear.ml/settings/workspace-configuration) (Settings → Workspace → Create new credentials), then run:
@@ -155,7 +155,7 @@ python train.py --img 640 --batch 16 --epochs 3 --data clearml://YOUR_DATASET_ID
 
 With experiments and data versioned, you can leverage ClearML for [hyperparameter optimization](https://docs.ultralytics.com/guides/hyperparameter-tuning). ClearML captures all necessary information (code, packages, environment), making experiments fully reproducible. Its HPO tools clone an existing experiment, modify hyperparameters, and rerun it automatically.
 
-To run HPO locally, use the provided script `utils/loggers/clearml/hpo.py`. You'll need the ID of a previously run training task (the "template task") to clone. Update the script with this ID and run:
+To run HPO locally, use the provided script `hpo.py`. You'll need the ID of a previously run training task (the "template task") to clone. Update the script with this ID and run:
 
 ```bash
 # Install Optuna, required by the optimizer used in the script
@@ -197,7 +197,7 @@ You can manage remote execution directly from the ClearML web UI:
 
 ### Executing a Task Remotely via Code
 
-You can also modify your training script to automatically enqueue tasks for remote execution. Add `task.execute_remotely()` after the ClearML logger is initialized in `train.py`:
+You can also modify your training script to automatically enqueue tasks for remote execution. Add `task.execute_remotely()` after the ClearML logger is initialized in `../../../train.py`:
 
 ```python
 # Inside train.py, after logger initialization...

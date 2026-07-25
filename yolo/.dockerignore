@@ -1,7 +1,7 @@
 # Repo-specific DockerIgnore -------------------------------------------------------------------------------------------
 .git
 .cache
-.idea
+../.idea
 runs
 output
 coco

@@ -246,7 +246,7 @@ YOLO integrates with the [Comet Optimizer](https://www.comet.com/docs/v2/guides/
 
 ### Configuring an Optimizer Sweep
 
-Create a [JSON](https://www.ultralytics.com/glossary/json) configuration file defining the sweep parameters, search strategy, and objective metric. An example is provided at `utils/loggers/comet/optimizer_config.json`.
+Create a [JSON](https://www.ultralytics.com/glossary/json) configuration file defining the sweep parameters, search strategy, and objective metric. An example is provided at `optimizer_config.json`.
 
 Run the sweep using the `hpo.py` script:
 
@@ -255,7 +255,7 @@ python utils/loggers/comet/hpo.py \
   --comet_optimizer_config "utils/loggers/comet/optimizer_config.json"
 ```
 
-The `hpo.py` script accepts the same arguments as `train.py`. Pass additional fixed arguments for the sweep:
+The `hpo.py` script accepts the same arguments as `../../../train.py`. Pass additional fixed arguments for the sweep:
 
 ```shell
 python utils/loggers/comet/hpo.py \
