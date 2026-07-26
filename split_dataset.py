@@ -8,7 +8,7 @@ import shutil
 from pathlib import Path
 
 
-IMAGE_SUFFIXES = {".jpg", ".jpeg", ".png", ".bmp", ".tif", ".tiff"}
+IMAGE_SUFFIXES = {".jpg", ".jpeg", ".png"}
 
 
 def parse_args() -> argparse.Namespace:
